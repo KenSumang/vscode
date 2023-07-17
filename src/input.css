@@ -3,15 +3,37 @@
 @tailwind utilities;
 
 .container{
-    @apply mx-auto sm:max-w-[750px] md:max-w-[991px] lg:max-w-[980px] xl:max-w-[1180px] w-full;
+    @apply mx-auto sm:max-w-[750px] md:max-w-[970px] lg:max-w-[970px] xl:max-w-[1170px] w-full;
 }
 
-.features{
-    .features__item{
-        background: gray;
+.features__item{
+        @apply odd:bg-light-light even:bg-light-dark flex flex-col  justify-center items-center px-4 py-14 gap-4 w-full odd:md:flex-row even:md:flex-row-reverse md:gap-24 md:py-20 lg:px-24
+    }
+    .features__item img{
+        @apply w-[270px] flex-auto md:w-[220px]
+    }
+    .features__details {
+        @apply flex flex-col gap-5 md:gap-7
     }
     .features__details h2{
-        font-size: 28px;
-        font-weight: thin;
+        @apply text-[20px] font-thin md:text-[28px]
     }
+    .features__item p{
+        @apply leading-8 text-[15.2px] md:text-[16px] md:tracking-normal
+    }
+
+.platform:before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    heght: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #25252b;
+    top: -10px;
+    right: 10px;
+}
+
+.userimage{
+    @apply w-16 h-16 rounded-full
 }
