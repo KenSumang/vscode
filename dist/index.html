@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="bg-dark-light">
+    <header class="bg-dark-light fixed w-full">
         <div class="container px-[14px]">
             <div class="header__wrapper h-[50px] flex text-white justify-between items-center">
                 <div class="header__logo-nav flex items-center justify-center gap-7">
@@ -18,21 +18,24 @@
                             <h2 class="text-[19px]">Visual Studio Code</h2>
                         </a>
                     </div>
-                    <ul class="header__nav text-white gap-6 hidden lg:flex opacity-60 pt-1">
-                        <li><a href="#">Docs</a></li>
-                        <li><a href="#">Updates</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">API</a></li>
-                        <li><a href="#">Extensions</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Learn</a></li>
+                    <ul class="header__nav text-[#ababad] gap-6 hidden lg:flex pt-1">
+                        <li><a href="#" class="hover:text-white duration-900">Docs</a></li>
+                        <li><a href="#" class="hover:text-white duration-900">Updates</a></li>
+                        <li><a href="#" class="hover:text-white duration-900">Blog</a></li>
+                        <li><a href="#" class="hover:text-white duration-900">API</a></li>
+                        <li><a href="#" class="hover:text-white duration-900">Extensions</a></li>
+                        <li><a href="#" class="hover:text-white duration-900">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white duration-900">Learn</a></li>
                     </ul>
                 </div>
                 
-                <ul class="header__sch-dl flex h-full">
-                    <li class="bg-[#3d3d42] pl-3">
-                        <i class="fa fa-magnifying-glass text-[14px] rotate-90" style="color: #fafafa;"></i>
-                        <input type="text" class="bg-[#3d3d42] h-full placeholder-white font-thin text-[14px]" placeholder="Search Docs">
+                <ul class="header__sch-dl hidden h-full lg:flex">
+                    <li class="w-full h-full hidden lg:block xl:hidden">
+                        <a href="#" class="w-full h-full"><i class="fa fa-magnifying-glass text-[14px] rotate-90 opacity-90" style="color: #fafafa;"></i></a>
+                    </li>
+                    <li class="bg-[#3d3d42] pl-3 hidden xl:block group hover:bg-[#525257]">
+                        <i class="fa fa-magnifying-glass text-[14px] rotate-90 opacity-90" style="color: #fafafa;"></i>
+                        <input type="text" class="bg-[#3d3d42] h-full placeholder-white font-thin text-[14px] group-hover:bg-[#525257] border-transparent" placeholder="Search Docs">
                     </li>
                     <li>
                         <button class="bg-accent-blue h-full w-[125px] hover:bg-[#005BA4]">
@@ -52,7 +55,7 @@
     </header>
 
     <section class="cta bg-dark-dark">
-        <div class="container px-16 py-2 md:py-[10px]">
+        <div class="container px-16 pb-2 pt-14 md:pb-[10px] md:pt-[59px] lg:pb-[11px] lg:pt-[60px]">
             <div class="cta__wrapper">
                 <p class="text-text-dark text-center"><a href="#" class="underline text-[#0098dd]">Version 1.80</a> is now available! Read about the new features and fixes from June.</p>
             </div>
@@ -61,16 +64,16 @@
 
     <section class="banner bg-dark-light">
         <div class="container px-[17px] max-w-[650px] lg:pt-9 lg:pb-14 xl:pb-9">
-            <div class="banner__wrapper flex flex-col justify-center items-center gap-5 lg:flex-row">
-                <div class="banner__Contents pt-5 gap-[15px] flex flex-col items-center lg:max-w-[800px]">
+            <div class="banner__wrapper flex flex-col justify-center gap-5 lg:flex-row align-top">
+                <div class="banner__Contents pt-5 items-center gap-[15px] flex flex-col lg:max-w-[800px] md:items-baseline">
                     <h1 class="text-white text-[40px] leading-[44px] tracking-[.5px] text-center font-thin lg:text-[47px] lg:leading-[55px]">Code editing.<br/><span class="font-semibold">Redefined.</span></h1>
                     <p class="text-text-dark text-center">Free. Built on open source. Runs everywhere.</p>
                     <div class="banner__btn-links flex flex-col items-center gap-[15px]">
                         <div class="banner__buttons text-white flex gap-[2px]">
-                            <button class="button bg-accent-blue px-12 py-3 leading-[15px]">
+                            <button class="button bg-accent-blue px-12 py-3 leading-[15px] hover:bg-[#005BA4]">
                                 <span class="font-semibold ">Download for Windows</span><br/><span class="text-[11px]">Stable Build</span>
                             </button>
-                            <button class="button bg-accent-blue px-[14px] py-3 ">
+                            <button class="button bg-accent-blue px-[14px] py-3 hover:bg-[#005BA4]">
                                 <i class="fa fa-chevron-down" style="color: #ffffff;"></i>
                             </button>
                         </div>
@@ -88,26 +91,26 @@
 
     <section class="tools bg-white">
         <div class="container px-4">
-            <div class="tools__wrapper justify-center">
-                <ul class="text-[17px] flex flex-col items-center md:flex-row">
-                    <ul class="flex items-center gap-7">
-                        <li class="flex flex-col items-center justify-center gap-3 w-[210px] h-[110px] hover:bg-[#e3e3e3] md:w-[165px]">
-                            <i class="fa fa-light fa-lightbulb text-[45px]" style="color: #444444;"></i>
-                            <p>Intellisense</p>
+            <div class="tools__wrapper">
+                <ul class="text-[17px] flex flex-col justify md:flex-row md:gap-7">
+                    <ul class="flex items-center gap-7 w-full">
+                        <li class="flex flex-col items-center justify-center gap-3 w-full h-[110px] hover:bg-[#e3e3e3] md:h-[125px] group">
+                            <i class="fa fa-light fa-lightbulb text-[45px] text-[#444444] group-hover:text-[#2E3192]"></i>
+                            <p class="md:text-[18px] lg:text-[20px]">Intellisense</p>
                         </li>
-                        <li class="flex flex-col items-center justify-center gap-3 w-[210px] h-[110px] hover:bg-[#e3e3e3] md:w-[165px]">
-                            <i class="fa fa-light fa-bug-slash text-[45px]" style="color: #444444;"></i>
-                            <p>Run and Debug</p>
+                        <li class="flex flex-col items-center justify-center gap-3 w-full h-[110px] hover:bg-[#e3e3e3] md:h-[125px] group">
+                            <i class="fa fa-light fa-bug-slash text-[45px] text-[#444444] group-hover:text-[#37B34A]"></i>
+                            <p class="md:text-[18px] lg:text-[20px]">Run and Debug</p>
                         </li>
                     </ul>
-                    <ul class="flex items-center gap-7">
-                        <li class="flex flex-col items-center justify-center gap-3 w-[210px] h-[110px] hover:bg-[#e3e3e3] md:w-[165px]">
-                            <i class="fa fa-code-branch text-[45px]" style="color: #444444;"></i>
-                            <p>Built-in Git</p>
+                    <ul class="flex items-center gap-7 w-full">
+                        <li class="flex flex-col items-center justify-center gap-3 w-full h-[110px] hover:bg-[#e3e3e3] md:h-[125px] group">
+                            <i class="fa fa-code-branch text-[45px] text-[#444444] group-hover:text-[#F42534]"></i>
+                            <p class="md:text-[18px] lg:text-[20px]">Built-in Git</p>
                         </li>
-                        <li class="flex flex-col items-center justify-center gap-3 w-[210px] h-[110px] hover:bg-[#e3e3e3] md:w-[165px]">
-                            <i class="fa fa-table-cells-large text-[45px]" style="color: #444444;"></i>
-                            <p>Extensions</p>
+                        <li class="flex flex-col items-center justify-center gap-3 w-full h-[110px] hover:bg-[#e3e3e3] md:h-[125px] group">
+                            <i class="fa fa-table-cells-large text-[45px] text-[#444444] group-hover:text-black"></i>
+                            <p class="md:text-[18px] lg:text-[20px]">Extensions</p>
                         </li>
                     </ul>
                 </ul>
@@ -232,7 +235,7 @@
         </div>
 
         <div class="features__item">
-            <img src="../images/Hundreds-of-Extensions.png" alt="">
+            <img src="../images/Hundreds-of-Extensions.png" alt="" class="hover:scale-[1.07] duration-1000">
             <div class="features__details">
                 <h2>Extensible and customizable.</h2>
                 <p>Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services. Extensions run in separate processes, ensuring they won't slow down your editor. <a href="#">Learn more about extensions.</a></p>
@@ -241,7 +244,7 @@
 
         <div class="features__item">
             <img src="../images/home-azure.svg" alt="">
-            <div class="featuresIntellisense__details">
+            <div class="features__details">
                 <h2>Deploy with confidence and ease</h2>
                 <p>With <a href="#">Microsoft Azure</a> you can deploy and host your React, Angular, Vue, Node, Python (and more!) sites, store and query relational and document based data, and scale with serverless computing, all with ease, <a href="#">all from within VS Code.</a></p>
             </div>
@@ -249,56 +252,56 @@
     </section>
     
     <section class="languages bg-light-dark">
-        <div class="container">
+        <div class="container py-20">
             <div class="languages__wrapper flex flex-col items-center">
                 <h2>VS Code for</h2>
-                <div class="languages__list block">
-                    <div class="language__item px-5">
-                        <p class="h-[100px]">
+                <ul class="flex md:w-[900px] flex-wrap">
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
+                        <p class="flex items-center">
                             <i class="fa-brands fa-square-js fa-xl" style="color: #cbcb41;"></i>
                             JavaScript
                         </p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-20">
                         <p>
                             <i class="fa-brands fa-python fa-xl" style="color: #519aba;"></i>
                             Python
                         </p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>
                             <i class="fa-brands fa-java fa-xl" style="color: #cc3e44;"></i>
                             Java
                         </p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>Markdown</p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>TypeScript</p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>C/C++</p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>JSON</p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>Powershell</p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>HTML/CSS</p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>C#</p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>PHP</p>
-                    </div>
-                    <div class="language__item px-5">
+                    </li>
+                    <li class="bg-slate-500 w-auto flex items-center px-3">
                         <p>YAML</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
                 <a href="#" class="text-link-highlight hover:underline">and many more languages on the Marketplace...</a>
                 <button>Get Started Now</button>
             </div>
@@ -307,131 +310,129 @@
 
     <section class="downloadLinks">
         <div class="container">
-            <div class="downloadLinks__wrapper">
-                <div class="downloadLinks__windows">
-                    <img src="../images/windows-logo.png" alt="">
-                    <button>
+            <div class="downloadLinks__wrapper flex flex-col items-center py-14 px-5 justify-center flex-wrap sm:gap-14 sm:flex-row sm:items-start">
+                <div class="downloadLinks__windows flex flex-col items-center gap-5">
+                    <img src="../images/windows-logo.png" alt="" class="w-[100px]">
+                    <button class="bg-accent-blue text-white w-60 h-16 hover:bg-[#005BA4]">
                         <div class="button__OS">
-                            <h2>Windows</h2>
+                            <h2 class="font-semibold text-[15px]"><i class="fa fa-arrow-down text-[14px] mr-4" style="color: #ffffff;"></i>Windows</h2>
                         </div>
-                        <p>Windows 8, 10, 11</p>
+                        <p class="text-[10px]">Windows 8, 10, 11</p>
                     </button>
                     <table>
                         <tr>
-                            <td>User Installer</td>
-                            <td>
-                                <p>x64</p>
-                                <p>x86</p>
-                                <p>Arm64</p>
+                            <td class="text-center font-semibold px-2">User Installer</td>
+                            <td class="text-white flex gap-[3px]">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x64</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x86</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm64</p>
                             </td>
                         </tr>
                         <tr>
-                            <td>System Installer</td>
-                            <td>
-                                <p>x64</p>
-                                <p>x86</p>
-                                <p>Arm64</p>
+                            <td class="text-center font-semibold px-2">System Installer</td>
+                            <td class="text-white flex gap-[3px]">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x64</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x86</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm64</p>
                             </td>
                         </tr>
                         <tr>
-                            <td>.zip</td>
-                            <td>
-                                <p>x64</p>
-                                <p>x86</p>
-                                <p>Arm64</p>
+                            <td class="text-center font-semibold px-2">.zip</td>
+                            <td class="text-white flex gap-[3px]">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x64</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x86</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm64</p>
                             </td>
                         </tr>
                         <tr>
-                            <td>CLI</td>
-                            <td>
-                                <p>x64</p>
-                                <p>x86</p>
-                                <p>Arm64</p>
+                            <td class="text-center font-semibold px-2 pt-4">CLI</td>
+                            <td class="text-white flex gap-[3px] pt-4">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x64</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x86</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm64</p>
                             </td>
                         </tr>
                     </table>
                 </div>
-                <div class="downloadLinks__linux">
-                    <img src="../images/linux-logo.png" alt="">
-                    <div class="buttons">
-                        <button>
+                <div class="downloadLinks__linux flex flex-col items-center gap-5">
+                    <img src="../images/linux-logo.png" alt="" class="w-[82px] pt-[2px]">
+                    <div class="buttons flex gap-[4px]">
+                        <button class="bg-accent-blue text-white w-[147px] h-16 hover:bg-[#005BA4]">
                             <div class="button__OS">
-                                <h2>.deb</h2>
+                                <h2 class="font-semibold text-[15px]"><i class="fa fa-arrow-down text-[14px] mr-4" style="color: #ffffff;"></i>.deb</h2>
                             </div>
-                            <p>Debian, Ubuntu</p>
+                            <p class="text-[10px]">Debian, Ubuntu</p>
                         </button>
-                        <button>
+                        <button class="bg-accent-blue text-white w-[147px] h-16 hover:bg-[#005BA4]">
                             <div class="button__OS">
-                                <h2>.rpm</h2>
+                                <h2 class="font-semibold text-[15px]"><i class="fa fa-arrow-down text-[14px] mr-4" style="color: #ffffff;"></i>.rpm</h2>
                             </div>
-                            <p>Red Hat, Fedora, SUSE</p>
+                            <p class="text-[10px]">Red Hat, Fedora, SUSE</p>
                         </button>
                     </div>
                     <table>
                         <tr>
-                            <td>.deb</td>
-                            <td>
-                                <p>x64</p>
-                                <p>x86</p>
-                                <p>Arm64</p>
+                            <td class="text-center font-semibold px-2">.deb</td>
+                            <td class="text-white flex gap-[3px]">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x64</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm32</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm64</p>
                             </td>
                         </tr>
                         <tr>
-                            <td>.rpm</td>
-                            <td>
-                                <p>x64</p>
-                                <p>x86</p>
-                                <p>Arm64</p>
+                            <td class="text-center font-semibold px-2">.rpm</td>
+                            <td class="text-white flex gap-[3px]">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x64</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm32</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm64</p>
                             </td>
                         </tr>
                         <tr>
-                            <td>.tar.gz</td>
-                            <td>
-                                <p>x64</p>
-                                <p>x86</p>
-                                <p>Arm64</p>
+                            <td class="text-center font-semibold px-2">.tar.gz</td>
+                            <td class="text-white flex gap-[3px]">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x64</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm32</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm64</p>
                             </td>
                         </tr>
                         <tr>
-                            <td>Snap</td>
-                            <td>
-                                <p>x64</p>
-                                <p>x86</p>
-                                <p>Arm64</p>
+                            <td class="text-center font-semibold px-2">Snap</td>
+                            <td class="text-white flex gap-[3px]">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Snap Store</p>
                             </td>
                         </tr>
                         <tr>
-                            <td>CLI</td>
-                            <td>
-                                <p>x64</p>
-                                <p>x86</p>
-                                <p>Arm64</p>
+                            <td class="text-center font-semibold px-2 pt-4">CLI</td>
+                            <td class="text-white flex gap-[3px] pt-4">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x64</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">x86</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Arm64</p>
                             </td>
                         </tr>
                     </table>
                 </div>
-                <div class="downloadLinks__mac">
-                    <img src="../images/linux-logo.png" alt="">
-                    <button>
-                        <div class="button__OS">
-                            <h2>Mac</h2>
+                <div class="downloadLinks__mac flex flex-col items-center gap-5">
+                    <img src="../images/apple-logo.svg" alt=""  class="w-20 pt-[3px]">
+                    <button class="bg-accent-blue text-white w-60 h-16 hover:bg-[#005BA4]">
+                        <div class="button__OS ">
+                            <h2 class="font-semibold text-[15px]"><i class="fa fa-arrow-down text-[14px] mr-4" style="color: #ffffff;"></i>Mac</h2>
                         </div>
-                        <p>macOS 10.11</p>
+                        <p class="text-[10px]">macOS 10.11</p>
                     </button>
                     <table>
                         <tr>
-                            <td>.zip</td>
-                            <td>
-                                <p>Intel chip</p>
-                                <p>Apple silicon</p>
-                                <p>Universal</p>
+                            <td class="text-center font-semibold px-2">.zip</td>
+                            <td class="text-white flex gap-[3px]">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Intel chip</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Apple silicon</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Universal</p>
                             </td>
                         </tr>
                         <tr>
-                            <td>CLI</td>
-                            <td>
-                                <p>Intel chip</p>
-                                <p>Apple silicon</p>
+                            <td class="text-center font-semibold px-2 pt-4">CLI</td>
+                            <td class="text-white flex gap-[3px] pt-4">
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Intel chip</p>
+                                <p class="bg-accent-blue w-fit px-[3px] text-[12px] rounded-[2px]">Apple silicon</p>
                             </td>
                         </tr>
                     </table>
@@ -440,32 +441,59 @@
         </div>
     </section>
 
-    <section class="lpTerms">
-        <div class="container">
-            <div class="lpTerms__wrapper">
-                <div class="lpTerms__suggestions">
-                    <div class="lpTerms__features">
-                        <h1>Want new features sooner?</h1>
-                        <p>Get the <a href="#">Insiders build</a> instead.</p>
+    <section class="lpTerms bg-light-dark">
+        <div class="container py-12 px-[110px] md:px-[165px] lg:px-[120px] xl:px-[165px]">
+            <div class="lpTerms__wrapper flex flex-col gap-24 lg:gap-28">
+                <div class="lpTerms__suggestions flex flex-col items-center gap-24 lg:flex-row lg:justify-between">
+                    <div class="lpTerms__features flex flex-col items-center gap-2">
+                        <h1 class="text-[18px] font-semibold text-center md:text-[19px] lg:text-[20px] xl:text-[21px]">Want new features sooner?</h1>
+                        <p class="text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]">Get the <a href="#" class="text-accent-blue hover:underline">Insiders build</a> instead.</p>
                     </div>
-                    <div class="lpTerms__vscode">
-                        <h1>Use <a href="#">vscode.dev</a> for quick edits online!</h1>
-                        <p>GitHub, Azure Repos, and local files.</p>
+                    <div class="lpTerms__vscode flex flex-col items-center gap-2">
+                        <h1 class="text-[18px] font-semibold text-center md:text-[19px] lg:text-[20px] xl:text-[21px]">Use <a href="#" class="text-accent-blue hover:underline">vscode.dev</a> for quick edits online!</h1>
+                        <p class="text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]">GitHub, Azure Repos, and local files.</p>
                     </div>
                 </div>
-                <div class="lpTerms__privacyTerms">
-                    <h3>License and Privacy Terms</h3>
-                    <p>By downloading and using Visual Studio Code, you agree to the <a href="#">license terms</a> and <a href="#">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us improve the product. If you would prefer not to have this data sent please go see <a href="#">How to Disable Crash Reporting</a> to learn how to disable it.</p>
+                <div class="lpTerms__privacyTerms flex flex-col items-center gap-2">
+                    <h3 class="text-[13px] font-semibold md:text-[13.5px] lg:text-[14.2px] xl:text-[15px]">License and Privacy Terms</h3>
+                    <p class="text-center text-[12px] leading-[35px] max-w-[690px] md:text-[13px]">By downloading and using Visual Studio Code, you agree to the <a href="#" class="text-accent-blue hover:underline">license terms</a> and <a href="#" class="text-accent-blue hover:underline">privacy statement</a>. VS Code automatically sends telemetry data and crash dumps to help us improve the product. If you would prefer not to have this data sent please go see <a href="#" class="text-accent-blue hover:underline">How to Disable Crash Reporting</a> to learn how to disable it.</p>
                 </div>
                 
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer__wrapper">
+    <footer class="bg-[#333333]">
+        <div class="container px-[15px] pb-5 pt-7 lg:pb-[43px] xl:pb-[23px]">
+            <div class="footer__wrapper text-white flex flex-col gap-7 lg:flex-row lg:justify-between">
+                <div class="footer_vsgit flex gap-6 pl-[24.5px] sm:pl-0">
+                    <p class="hidden sm:block text-[14px]">Hello from Seattle.</p>
+                    <a href="#" class="hover:text-[#B4A0FF] text-[14px]">Follow @code</a>
+                    <div class="vsgit__links flex gap-1">
+                        <a href="https://github.com/Microsoft/vscode/" target="_blank">
+                            <p class="bg-[#fafafa] text-black text-[11px] font-semibold px-[6px] py-[2px] w-fit rounded-[2.5px] flex gap-[5px] items-center">
+                                <i class="fa-brands fa-github text-[14px]" style="color: #333333;"></i>
+                                Star
+                            </p>
+                        </a>
+                        <a href="https://github.com/Microsoft/vscode/stargazers" target="_blank" >
+                            <p class="bg-[#fafafa] text-black text-[11px] font-semibold px-[6px] py-[2px] w-fit rounded-[2.5px]">148,366</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__nav flex gap-8 lg:flex-col lg:items-end lg:gap-2 xl:flex-row xl:items-start xl:gap-8">
+                    <ul class="flex gap-[23px] text-[12px]">
+                        <li class="hover:text-[#B4A0FF]">Support</li>
+                        <li class="hover:text-[#B4A0FF]">Privacy</li>
+                        <li class="hover:text-[#B4A0FF]">Terms of Use</li>
+                        <li class="hover:text-[#B4A0FF]">License</li>
+                    </ul>
 
+                    <div class="footer__mslink">
+                        <a href="#"><img src="../images/microsoft-logo.png" alt="" class="w-24"></a>
+                        <p class="text-[12px] mt-[-0.5px]">© 2023 Microsoft</p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
