@@ -30,10 +30,23 @@
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 15px solid #25252b;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 4px;
 }
 
 .userimage{
     @apply w-16 h-16 rounded-full
+}
+
+.tns-outer {
+    /* @apply relative; */
+}
+
+.tns-controls {
+    /* @apply flex justify-between absolute top-[9.7rem] left-0 w-full md:top-[8rem] md:w-[46.8rem] lg:top-[5rem] lg:w-[62.7rem] xl:top-[3rem] xl:left-[-2rem] xl:w-[77rem] z-20; */
+    @apply flex justify-between top-[9.7rem] left-[-22px] w-full px-7
+}
+
+.tns-controls button {
+    @apply text-[18px] text-[#7a7a7a] md:text-[26px] hover:text-[#8B8B8B];
 }

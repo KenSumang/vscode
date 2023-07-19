@@ -10,3 +10,13 @@ window.addEventListener("scroll", () => {
         batches.classList.remove("pink");
     }
 });
+
+var slider = tns({
+    container: '.feedback__user',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    controlsText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
+    nav: false,
+    speed: '850'
+})
