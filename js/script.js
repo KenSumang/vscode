@@ -1,13 +1,18 @@
 const header = document.querySelector(".header");
+const toggle = document.querySelector(".header__button");
+const headerNav = document.querySelector(".header__nav");
 
-window.addEventListener("scroll", () => {
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    headerNav.classList.toggle('open');
+})
+
+window.addEventListener('scroll', () => {
     console.log(window.scrollY);
-    if (window.scrollY >= 20) {
+    if (window.scrollY >= 10) {
         header.classList.add("active");
-        batches.classList.add("pink");
     } else {
         header.classList.remove("active");
-        batches.classList.remove("pink");
     }
 });
 
