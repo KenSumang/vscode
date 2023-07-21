@@ -5,13 +5,31 @@
 .container{
     @apply mx-auto sm:max-w-[750px] md:max-w-[970px] lg:max-w-[970px] xl:max-w-[1170px] w-full;
 }
-
-.header__nav{
-    @apply flex flex-col gap-4 h-0 items-start absolute left-[-3px] top-[66px] bg-dark-light lg:h-full lg:text-[#ababad] lg:top-0 lg:items-center lg:gap-6 lg:flex-row lg:pt-1 lg:left-[221px] z-[100]
+/* from kent */
+/* .header__nav{
+    @apply mr-[1rem] absolute max-h-0 overflow-hidden left-0 top-[2.8rem] w-full bg-[#2c2c32] duration-[.5s] ease-in-out md:w-fit md:max-h-fit z-[100]
 }
 
 .header__nav.open{
     @apply max-h-[28.5rem] overflow-y-scroll transition-all duration-[.5s] md:overflow-y-hidden
+} */
+
+/* experimental */
+
+.header__nav{
+    @apply absolute hidden gap-4 left-[-31px] top-[50px] bg-dark-light w-screen duration-[1s] ease-in-out lg:pl-0 lg:w-fit lg:h-full lg:text-[#ababad] lg:top-0 lg:items-center lg:flex lg:gap-6 lg:flex-row lg:pt-1 lg:left-[221px] z-[100]
+}
+
+.header__nav li{
+    @apply pl-[29px] lg:pl-0
+}
+
+.header__nav.open{
+    @apply flex flex-col max-h-[21.2rem] pt-[16px] overflow-y-scroll transition-all ease-in duration-[.5s] lg:hidden
+}
+
+.buttons__table.open{
+    @apply block
 }
 
 .features__item{

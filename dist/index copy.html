@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Studio Code</title>
+    <link rel="icon" href="../images/apple-touch-icon.png">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+</head>
+<body>
+    <header class="header bg-dark-light fixed w-full z-[1000]">
+        <div class="container px-[14px]">
+            <div class="header__wrapper h-[50px] flex text-white justify-between items-center">
+                <div class="header__logo-nav flex items-center justify-center gap-7 h-full relative">
+                    <div class="header__Logo h-full flex items-center hover:cursor-pointer">
+                        <a href="#" class="flex gap-[13px] items-center">
+                            <img src="../images/logo.png" alt="" class="w-6 h-6">
+                            <h2 class="text-[19px]">Visual Studio Code</h2>
+                        </a>
+                    </div>
+                    <ul class="header__nav">
+                        <li class="h-full flex items-center group hover:cursor-pointer"><a href="https://code.visualstudio.com/docs" class="group-hover:text-white duration-900">Docs</a></li>
+                        <li class="h-full flex items-center group hover:cursor-pointer"><a href="https://code.visualstudio.com/updates/v1_80" class="group-hover:text-white duration-900">Updates</a></li>
+                        <li class="h-full flex items-center group hover:cursor-pointer"><a href="https://code.visualstudio.com/blogs/2023/07/20/mangling-vscode" class="group-hover:text-white duration-900">Blog</a></li>
+                        <li class="h-full flex items-center group hover:cursor-pointer"><a href="https://code.visualstudio.com/api" class="group-hover:text-white duration-900">API</a></li>
+                        <li class="h-full flex items-center group hover:cursor-pointer"><a href="https://marketplace.visualstudio.com/VSCode" target="_blank"  class="group-hover:text-white duration-900">Extensions</a></li>
+                        <li class="h-full flex items-center group hover:cursor-pointer"><a href="https://code.visualstudio.com/docs/supporting/faq" class="group-hover:text-white duration-900">FAQ</a></li>
+                        <li class="h-full flex items-center group hover:cursor-pointer"><a href="https://code.visualstudio.com/learn" class="group-hover:text-white duration-900">Learn</a></li>
+                        <li class="h-full flex items-center group hover:cursor-pointer lg:hidden"><a href="https://code.visualstudio.com/Search" class="group-hover:text-white duration-900">Search</a></li>
+                        <a href="https://code.visualstudio.com/docs/?dv=win" class="group-hover:text-white duration-900 justify-start lg:hidden">
+                            <button class="flex items-center bg-accent-blue h-[50px] w-full pl-[40px] hover:bg-[#005BA4]">
+                                <i class="fa fa-arrow-down text-[14px] pr-[8.5px] focus:bg-black" style="color: #ffffff;"></i>
+                                Download
+                            </button>
+                        </a>
+                    </ul>
+                </div>
+                
+                <ul class="header__sch-dl hidden h-full lg:flex">
+                    <li class="hidden py-3 px-[15px] lg:block xl:hidden group hover:cursor-pointer">
+                        <a href="https://code.visualstudio.com/Search" class=""><i class="fa fa-magnifying-glass text-[14px] rotate-90 opacity-50 group-hover:opacity-90" style="color: #fafafa;"></i></a>
+                    </li>
+                    <li class="bg-[#3d3d42] w-[182px] hidden xl:flex gap-6 group hover:bg-[#525257]">
+                        <i class="fa fa-magnifying-glass text-[14px] rotate-90 opacity-90" style="color: #fafafa;"></i>
+                        <input type="text" class="bg-[#3d3d42] h-full placeholder-white font-thin text-[14px] group-hover:bg-[#525257] pl-[8px] outline-none placeholder:opacity-80" placeholder="Search Docs">
+                    </li>
+                    <li>
+                        <button class="bg-accent-blue h-full w-[128px] hover:bg-[#005BA4]">
+                            <i class="fa fa-arrow-down text-[14px] pr-[8.5px] focus:bg-black" style="color: #ffffff;"></i>
+                            Download
+                        </button>
+                    </li>
+                </ul>
+
+                <button class="header__button flex flex-col gap-1 px-[10px] py-[9px] items-center justify-center rounded-[4px] hover:bg-accent-blue lg:hidden">
+                    <span class="w-[22px] h-[2px] bg-white rounded-sm"></span>
+                    <span class="w-[22px] h-[2px] bg-white rounded-sm"></span>
+                    <span class="w-[22px] h-[2px] bg-white rounded-sm"></span>
+                </button> 
+            </div>
+        </div>
+    </header>
+    
+    <section class="cta bg-dark-dark">
+        <div class="container px-16 pb-2 pt-14 md:pb-[10px] md:pt-[59px] lg:pb-[11px] lg:pt-[60px]">
+            <div class="cta__wrapper">
+                <p class="text-text-dark text-center"><a href="#" class="underline text-[#0098dd] hover:no-underline">Version 1.80</a> is now available! Read about the new features and fixes from June.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner bg-dark-light">
+        <div class="container px-[17px]">
+            <div class="banner__wrapper flex flex-col justify-center gap-5 lg:pt-9 lg:pb-14 xl:pb-7 lg:flex-row align-top xl:gap-10">
+                <div class="banner__Contents  pt-5 items-center gap-[14px] flex flex-col lg:pt-7">
+                    <h1 class="text-white text-[42px] leading-[44px] tracking-[.5px] text-center font-thin lg:text-[48px] lg:leading-[55px]">MAMA MO.<br/><span class="font-normal">Windows.</span></h1>
+                    <p class="text-text-dark text-center text-[15px] lg:text-[16px] xl:text-[17.5px]">Free. Built on open source. Runs everywhere.</p>
+                    <div class="banner__btn-links flex flex-col items-center gap-[13px] pt-2">
+                        <div class="banner__buttons text-white flex gap-[2px] relative">
+                            <a href="https://code.visualstudio.com/docs/?dv=win">
+                                <button class="dlButton bg-accent-blue px-10 py-3 leading-[15px] hover:bg-[#005BA4] lg:px-4 lg:py-4">
+                                    <span class="font-semibold w-full lg:text-[18px]">Download for Windows</span><br/><span class="text-[11px] md:text-[11.5px]">Stable Build</span>
+                                </button>
+                            </a>
+                            <button class="ddButton bg-accent-blue px-[14px] py-3 hover:bg-[#005BA4]">
+                                <i class="fa fa-chevron-down" style="color: #ffffff;"></i>
+                            </button>
+                            <div class="buttons__table hidden absolute bg-[#f2f2f2] text-black w-[308px] top-[56px] border-accent-blue border-[2px] z-[10] md:w-[318px] lg:w-[325px] xl:w-[337px]">
+                                <table class="table__downloads w-full">
+                                    <thead class="text-[14px] lg:text-[15px] xl:text-[16px]">
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th class="font-thin text-center pt-[7px] px-[7px]">Stable</th>
+                                            <th class="font-thin text-center pt-[7px] bg-[#e3e3e3] px-[7px]">Insiders</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-bold text-[13px] pl-2 w-[98px] py-[12px] lg:min-w-[110px] lg:text-[14px] xl:text-[15px]">macOS</td>
+                                            <td>Universal</td>
+                                            <td class="text-center">
+                                                <a href="#">
+                                                    <i class="fa fa-arrow-down text-[14px] text-accent-blue"></i>
+                                                </a>
+                                            </td>
+                                            <td class="text-center bg-[#e3e3e3]">
+                                                <a href="#">
+                                                    <i class="fa fa-arrow-down text-[14px] text-black"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="border-t-[1px] border-gray-300">
+                                        <tr>
+                                            <td class="font-bold text-[13px] pl-2 py-[12px] lg:text-[14px] xl:text-[15px]">Windows x64</td>
+                                            <td class="min-w-[95px]">User Installer</td>
+                                            <td class="text-center">
+                                                <a href="#">
+                                                    <i class="fa fa-arrow-down text-[14px] text-accent-blue"></i>
+                                                </a>
+                                            </td>
+                                            <td class="text-center bg-[#e3e3e3]">
+                                                <a href="#">
+                                                    <i class="fa fa-arrow-down text-[14px] text-black"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="border-t-[1px] border-gray-300">
+                                        <tr>
+                                            <td class="font-bold text-[13px] pl-2 pt-[12px] lg:text-[14px] xl:text-[15px]">Linux x64</td>
+                                            <td>.deb</td>
+                                            <td class="text-center">
+                                                <a href="#">
+                                                    <i class="fa fa-arrow-down text-[14px] text-accent-blue"></i>
+                                                </a>
+                                            </td>
+                                            <td class="text-center bg-[#e3e3e3]">
+                                                <a href="#">
+                                                    <i class="fa fa-arrow-down text-[14px] text-black"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td class=" pb-[10px]">.rpm</td>
+                                            <td class="text-center">
+                                                <a href="#">
+                                                    <i class="fa fa-arrow-down text-[14px] text-accent-blue"></i>
+                                                </a>
+                                            </td>
+                                            <td class="text-center bg-[#e3e3e3]">
+                                                <a href="#">
+                                                    <i class="fa fa-arrow-down text-[14px] text-black"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="border-t-[1px] border-gray-300">
+                                        <tr class="">
+                                            <td class="text-center text-[14px] col-span-4 px-24 py-[6px]" colspan="4">
+                                                <a href="#" class="text-accent-blue hover:underline">Other downloads</a> or <a href="#" class="text-accent-blue hover:underline">open on web</a>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <p class="relative platform text-text-dark text-[11.5px] text-center bg-dark-dark w-full py-[9px] px-2 rounded-[9px]"><a href="#" class="text-accent-blue hover:underline z-[1]">Web</a>, <a href="#" class="text-accent-blue hover:underline">Insiders edition</a>, or <a href="#"  class="text-accent-blue hover:underline">other platforms</a></p>
+                        <p class="text-text-dark text-[12px] text-center">By using VS Code, you agree to its<br/><a href="#" class="text-accent-blue text-[12px] hover:underline">license and privacy statement.</a></p>
+                    </div>
+                </div>
+                <div class="banner__image flex justify-center">
+                    <img src="../images/gorilla.jpg" alt="" class="sm:max-w-[700px] lg:w-[800px] xl:hidden">
+                    <img src="../images/gorilla.jpg" alt="" class="hidden w-[580px] xl:block">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#333333]">
+        <div class="container px-[15px] pb-5 pt-7 lg:pb-[43px] xl:pb-[23px]">
+            <div class="footer__wrapper text-white flex flex-col gap-7 lg:flex-row lg:justify-between">
+                <div class="footer_vsgit flex gap-6 pl-[24.5px] sm:pl-0">
+                    <p class="hidden sm:block text-[14px]">Hello from Seattle.</p>
+                    <a href="#" class="hover:text-[#B4A0FF] text-[14px] h-fit">Follow @code</a>
+                    <div class="vsgit__links flex gap-1">
+                        <a href="https://github.com/Microsoft/vscode/" target="_blank" class="h-fit">
+                            <p class="bg-[#fafafa] text-black text-[11px] font-semibold px-[6px] py-[2px] w-fit rounded-[2.5px] flex gap-[5px] items-center hover:bg-[#DFDFDF]">
+                                <i class="fa-brands fa-github text-[14px]" style="color: #333333;"></i>
+                                Star
+                            </p>
+                        </a>
+                        <a href="https://github.com/Microsoft/vscode/stargazers" target="_blank" class="h-fit relative ftrarrow">
+                            <p class="bg-[#fafafa] text-black text-[11px] font-semibold px-[6px] py-[2px] w-fit rounded-[2.5px] hover:text-accent-blue">148,366</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__nav flex gap-8 lg:flex-col lg:items-end lg:gap-2 xl:flex-row xl:items-start xl:gap-8">
+                    <ul class="flex gap-[23px] text-[12px]">
+                        <a href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d" target="_blank">
+                            <li class="hover:text-[#B4A0FF] hover:cursor-pointer">Support</li>
+                        </a>
+                        <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank">
+                            <li class="hover:text-[#B4A0FF] hover:cursor-pointer">Privacy</li>
+                        </a>
+                        <a href="https://www.microsoft.com/en-us/legal/terms-of-use" target="_blank">
+                            <li class="hover:text-[#B4A0FF] hover:cursor-pointer">Terms of Use</li>
+                        </a>
+                        <a href="https://code.visualstudio.com/License">
+                            <li class="hover:text-[#B4A0FF] hover:cursor-pointer">License</li>
+                        </a>
+                    </ul>
+
+                    <div class="footer__mslink">
+                        <a href="#"><img src="../images/microsoft-logo.png" alt="" class="w-24"></a>
+                        <p class="text-[12px] mt-[-0.5px]">© 2023 Microsoft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

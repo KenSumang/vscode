@@ -1,10 +1,23 @@
 const header = document.querySelector(".header");
 const toggle = document.querySelector(".header__button");
 const headerNav = document.querySelector(".header__nav");
+const ddtoggle = document.querySelector(".ddButton");
+const drpdnTable = document.querySelector('.buttons__table');
+
+ddtoggle.addEventListener('click', () => {
+    drpdnTable.classList.toggle('open');
+})
 
 toggle.addEventListener('click', () => {
     toggle.classList.toggle('open');
     headerNav.classList.toggle('open');
+})
+
+window.addEventListener('resize', () => {
+    console.log(window.innerWidth);
+    if (window.innerWidth >= 1022) {
+        headerNav.classList.remove('open');
+    }
 })
 
 window.addEventListener('scroll', () => {
